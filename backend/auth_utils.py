@@ -19,7 +19,7 @@ EXPIRE_MIN = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "10080"))
 pwd_context   = CryptContext(schemes=["bcrypt"], deprecated="auto")
 bearer_scheme = HTTPBearer()
 
-def hash_password(password): return pwd_context.hash(password)
+def hash_password(password): return pwd_context.hash(password[:72])
 def verify_password(plain, hashed): return pwd_context.verify(plain, hashed)
 
 def create_access_token(data, expires_delta=None):
