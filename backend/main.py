@@ -33,6 +33,13 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(progress.router)
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://hanzi-game.onrender.com"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def root():
