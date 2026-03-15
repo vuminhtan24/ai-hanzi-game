@@ -12,7 +12,7 @@ DB_NAME     = os.getenv("DB_NAME", "hanzi_game")
 DB_USER     = os.getenv("DB_USER", "root")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "1234")
 
-DATABASE_URL = (DATABASE_URL = "mysql+pymysql://root:123456@localhost/hanzi")
+DATABASE_URL = "mysql+pymysql://root:hrRqCCnFQUYtjMVDZmbxXeFAVxDJkdWp@crossover.proxy.rlwy.net:23596/railway"
 
 engine = create_engine(DATABASE_URL, echo=False, pool_pre_ping=True, pool_recycle=3600)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
