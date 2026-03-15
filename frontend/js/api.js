@@ -2,7 +2,7 @@
 // api.js — Fetch wrapper tự động đính kèm JWT
 // ══════════════════════════════════════════════
 
-const API_BASE = "https://ai-hanzi-game-api.onrender.com"
+const API_BASE = "https://ai-hanzi-game.onrender.com"
 
 const Api = {
   // ── Token helpers ────────────────────────
